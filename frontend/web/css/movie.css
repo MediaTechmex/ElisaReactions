@@ -1,0 +1,21 @@
+.timeline-wrapper{
+    padding-bottom:0px;
+}
+.reactions-wrapper{
+    width:100%;
+
+    height:40px;
+    position: relative;
+    margin-top:100px;
+    /* margin-bottom:50px; */
+}
+button{
+    margin-top:50px;
+}
+.timeline-emoji{
+    position: absolute;
+    height:40px;
+    top:0;
+    left:0;
+    transform: translateX(-50%);
+}
