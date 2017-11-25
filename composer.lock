@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "efbaa4620b38bf00b59f2070fbe09b70",
+    "content-hash": "809831007342f7a017fac9cd156f32ea",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -324,6 +324,47 @@
                 "html"
             ],
             "time": "2017-06-03T02:28:16+00:00"
+        },
+        {
+            "name": "perminder-klair/yii2-videojs",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/perminder-klair/yii2-videojs.git",
+                "reference": "9da26d7ba054e2b9a618d8f22f795a9541501449"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/perminder-klair/yii2-videojs/zipball/9da26d7ba054e2b9a618d8f22f795a9541501449",
+                "reference": "9da26d7ba054e2b9a618d8f22f795a9541501449",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "kato\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Parminder Klair",
+                    "email": "perminder.klair@gmail.com"
+                }
+            ],
+            "description": "VideoJs Player for Yii2",
+            "keywords": [
+                " videojs",
+                "extension",
+                "yii2"
+            ],
+            "time": "2015-05-26T09:45:34+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1463,16 +1504,16 @@
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "3cc8f69b3028d0f96a9078e6295d86e9bf019be5"
+                "reference": "8ebba84e5bd74fc5fdeb916b38749016c7232f93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/3cc8f69b3028d0f96a9078e6295d86e9bf019be5",
-                "reference": "3cc8f69b3028d0f96a9078e6295d86e9bf019be5",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/8ebba84e5bd74fc5fdeb916b38749016c7232f93",
+                "reference": "8ebba84e5bd74fc5fdeb916b38749016c7232f93",
                 "shasum": ""
             },
             "require": {
@@ -1506,7 +1547,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2016-10-03T07:40:28+00:00"
+            "time": "2017-11-24T15:00:59+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -3247,7 +3288,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "perminder-klair/yii2-videojs": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

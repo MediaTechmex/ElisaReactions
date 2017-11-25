@@ -72,7 +72,7 @@ $this->title = 'My Yii Application';
                         echo "<img src=\"$model->picture_url\" />";
                         echo "<h3>$model->name</h3>";
                         echo "<p>$model->description</p>";
-                        echo Html::a('Katso','movie/view',['class'=>'btn']);
+                        echo Html::a('Katso',['movie/index','id'=>$model->id],['class'=>'btn']);
                         echo '</div>';
                         echo '</div>';
                     }

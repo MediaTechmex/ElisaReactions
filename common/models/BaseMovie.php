@@ -11,7 +11,7 @@ use Yii;
  * @property string $name
  * @property integer $length
  * @property string $picture_url
- * @property string $stream_url
+ * @property integer $program_id
  * @property string $description
  *
  * @property Reaction[] $reactions
@@ -32,9 +32,10 @@ class BaseMovie extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'length', 'picture_url', 'stream_url', 'description'], 'required'],
-            [['length'], 'integer'],
-            [['name', 'picture_url', 'stream_url', 'description'], 'string', 'max' => 255],
+            [['name', 'length', 'picture_url', 'program_id', 'description'], 'required'],
+            [['length', 'program_id'], 'integer'],
+            [['description'], 'string'],
+            [['name', 'picture_url'], 'string', 'max' => 255],
         ];
     }
 
@@ -48,7 +49,7 @@ class BaseMovie extends \yii\db\ActiveRecord
             'name' => 'Name',
             'length' => 'Length',
             'picture_url' => 'Picture Url',
-            'stream_url' => 'Stream Url',
+            'program_id' => 'Program ID',
             'description' => 'Description',
         ];
     }
