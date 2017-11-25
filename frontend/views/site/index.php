@@ -1,6 +1,8 @@
 
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
+use common\models\Reaction;
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
@@ -89,10 +91,18 @@ $this->title = 'My Yii Application';
                 <div class="row">
                     <?php
                     foreach ($models as $model){
+                        $reactions = Reaction::countReactions($model->id);
                         echo '<div class="col-sm-4">';
                         
                         echo '<div class="result-inner">';
-                        echo '<div class="result-reactions"><div class="result-reaction top3"><img src="images/hammennys.png" /><span>50%</span></div></div>';
+                        echo '<div class="result-reactions">'
+                        . '<div class="result-reaction top3">';
+                        foreach ($reactions as $reaction => $percent){
+                            echo '<img src="'.Url::to(['images/'.$reaction.'.png']).'" />';
+                            echo "<span>$percent%</span>";
+                        }
+                        echo '</div>'
+                        . '</div>';
                         echo '<div class="result-wrapper">';
                         echo "<img src=\"$model->picture_url\" />";
                         echo "<h3>$model->name</h3>";
