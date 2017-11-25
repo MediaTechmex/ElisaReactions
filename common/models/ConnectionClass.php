@@ -31,45 +31,45 @@ class ConnectionClass {
     }
     
     static public function get($url,$action,$appVersion = '2.0',$v = 2, $platform='online') {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "$url$action?v=$v&platform=$platform&appVersion=$appVersion");
-        curl_setopt($ch, CURLOPT_HTTPHEADER, [                                                                          
+        $ch = \curl_init();
+        \curl_setopt($ch, CURLOPT_URL, "$url$action?v=$v&platform=$platform&appVersion=$appVersion");
+        \curl_setopt($ch, CURLOPT_HTTPHEADER, [                                                                          
             'Authorization: Bearer '.self::$accessToken
         ]);           
 
         // receive server response ...
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        \curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-        $server_output = curl_exec ($ch);
-        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $server_output = \curl_exec ($ch);
+        $http_code = \curl_getinfo($ch, CURLINFO_HTTP_CODE);
         
-        curl_close ($ch);
+        \curl_close ($ch);
         
         return json_decode($server_output);
     }
     
     static public function post($url,$action,$encoding,$data){
-        $ch = curl_init();
+        $ch = \curl_init();
         if($encoding == 'application/json'){
             $data_string = (json_encode($data));
         } else {
             $data_string = (http_build_query($data));
         }
-        curl_setopt($ch, CURLOPT_URL, "$url$action");
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS,$data_string);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+        \curl_setopt($ch, CURLOPT_URL, "$url$action");
+        \curl_setopt($ch, CURLOPT_POST, 1);
+        \curl_setopt($ch, CURLOPT_POSTFIELDS,$data_string);
+        \curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
             'Content-Type: '.$encoding,
             'Accept:'
             )                                                                       
         );
         // receive server response ...
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        \curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-        $server_output = curl_exec ($ch);
-        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $server_output = \curl_exec ($ch);
+        $http_code = \curl_getinfo($ch, CURLINFO_HTTP_CODE);
         
-        curl_close ($ch);
+        \curl_close ($ch);
         return json_decode($server_output);
     }
     
