@@ -51,8 +51,8 @@ $this->registerJs('requirejs.config({
   });'
 );
 ?>
-<div class="movie-index container">
-
+<div class="movie-index">
+<div class="container">
     <h1><?= Html::encode($this->title) ?></h1>
     <div><?=$model->description ?></div>
     <div><image src="<?= $model->picture_url ?>"/></div>
@@ -61,36 +61,55 @@ $this->registerJs('requirejs.config({
             Your browser does not support HTML5 video.
             
         </video>
-        <div class="reactions-container">
+        <div class="emoji-container2">
+        <ul class="emojilist2">
+            <li>
+                <img src="<?= Url::to(['images/hammennys.png']) ?>" onClick="setEmoji('hammennys')" />
+            </li>
+            <li>
+                <img src="<?= Url::to(['images/hilpea.png']) ?>" onClick="setEmoji('hilpea')" />
+            </li>
+            <li>
+                <img src="<?= Url::to(['images/piina.png']) ?>" onClick="setEmoji('piina')" />
+            </li>
+            <li>
+                <img src="<?= Url::to(['images/liikuttava.png']) ?>" onClick="setEmoji('liikuttava')" />
+            </li>
+            <li>
+                <img src="<?= Url::to(['images/sydan.png']) ?>" onClick="setEmoji('sydan')" />
+            </li>
+        </ul>
+    </div>
+        <!-- <div class="emoji-container">
+        <ul class="emojilist">
+            <li>
+                <img src="<?= Url::to(['images/hammennys.png']) ?>" onClick="setEmoji('hammennys')" />
+            </li>
+            <li>
+                <img src="<?= Url::to(['images/hilpea.png']) ?>" onClick="setEmoji('hilpea')" />
+            </li>
+            <li>
+                <img src="<?= Url::to(['images/piina.png']) ?>" onClick="setEmoji('piina')" />
+            </li>
+            <li>
+                <img src="<?= Url::to(['images/liikuttava.png']) ?>" onClick="setEmoji('liikuttava')" />
+            </li>
+            <li>
+                <img src="<?= Url::to(['images/sydan.png']) ?>" onClick="setEmoji('sydan')" />
+            </li>
+        </ul>
+    </div> -->
+        <!-- <div class="reactions-container">
              <div class="reactions-wrapper"></div>
-        </div>
+        </div> -->
     </div>
     
 
     
 
-    <div class="emoji-container">
-    <ul class="emojilist">
-        <li>
-            <img src="<?= Url::to(['images/hammennys.png']) ?>" onClick="setEmoji('hammennys')" />
-        </li>
-        <li>
-            <img src="<?= Url::to(['images/hilpea.png']) ?>" onClick="setEmoji('hilpea')" />
-        </li>
-        <li>
-            <img src="<?= Url::to(['images/piina.png']) ?>" onClick="setEmoji('piina')" />
-        </li>
-        <li>
-            <img src="<?= Url::to(['images/liikuttava.png']) ?>" onClick="setEmoji('liikuttava')" />
-        </li>
-        <li>
-            <img src="<?= Url::to(['images/sydan.png']) ?>" onClick="setEmoji('sydan')" />
-        </li>
-    </ul>
+    
+
 </div>
-    <ul id="templist">
-        
-    </ul>
 </div>
 
 
@@ -98,7 +117,7 @@ $this->registerJs('requirejs.config({
     var movieTimeline = document.getElementById('timeline');
     var video = document.getElementsByClassName('video-js')[0];
     var reactionsTimeline = document.getElementsByClassName('reactions-wrapper')[0];
-    console.log(video);
+
     
     // video.insertAdjacentHTML('beforeend', '');
 
@@ -108,19 +127,33 @@ $this->registerJs('requirejs.config({
             'pointOnTimeline': 'timeNow'
         };
         // var timeline;
+        var sliderHorizontal = document.getElementsByClassName('vjs-slider-horizontal')[1];
+        
+
+        var sliderContainer = document.createElement("div");
+        sliderContainer.id = "slider-emoji-container";
+        // document.body.insertBefore(sliderContainer, sliderHorizontal); 
+        // sliderHorizontal.appendChild(sliderContainer);
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('sasdasd; ' + document.getElementsByClassName('vjs-slider-horizontal').length);
+    // sliderHorizontal.insertAdjacentHTML('beforeend', '<div id="slider-emoji-container"></div>');
+});
+      
     
 
     function setEmoji(type){
         console.log('Set emoji fired');
+        // var slider = document.getElementById('slider-emoji-container');
         var sliderPercentage = document.getElementsByClassName('vjs-slider-horizontal')[1].getAttribute('aria-valuenow');
         console.log(sliderPercentage);
         var timeNow = sliderPercentage;
 
         
+        
 
         var emoji = '<img style="left:' + timeNow + '%" src="../images/' + type + '.png" class="timeline-emoji" />'
 
-        reactionsTimeline.insertAdjacentHTML('beforeend', emoji);
+        document.getElementsByClassName('vjs-slider-horizontal')[1].insertAdjacentHTML('beforeend', emoji);
 
         var reaction = {
             'type': type,
