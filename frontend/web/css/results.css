@@ -31,6 +31,10 @@
     color:#fff;
     padding:7px 0;
 }
+.result-reactions.single-movie-reaction{
+    margin-right: 5px;
+    float: none;
+}
 .result-reaction.top3{
     background-color:#404041;
 }

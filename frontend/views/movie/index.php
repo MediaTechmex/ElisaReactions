@@ -54,56 +54,66 @@ $this->registerJs('requirejs.config({
 <div class="movie-index">
 <div class="container">
     <h1><?= Html::encode($this->title) ?></h1>
-    <div><?=$model->description ?></div>
-    <div><image src="<?= $model->picture_url ?>"/></div>
-    <div class="video-container">
-        <video id="video" width="640" height="360" crossOrigin="anonymous" controls class="video-js vjs-default-skin vjs-big-play-centered">
-            Your browser does not support HTML5 video.
-            
-        </video>
-        <div class="emoji-container2">
-        <ul class="emojilist2">
-            <li>
-                <img src="<?= Url::to(['images/hammennys.png']) ?>" onClick="setEmoji('hammennys')" />
-            </li>
-            <li>
-                <img src="<?= Url::to(['images/hilpea.png']) ?>" onClick="setEmoji('hilpea')" />
-            </li>
-            <li>
-                <img src="<?= Url::to(['images/piina.png']) ?>" onClick="setEmoji('piina')" />
-            </li>
-            <li>
-                <img src="<?= Url::to(['images/liikuttava.png']) ?>" onClick="setEmoji('liikuttava')" />
-            </li>
-            <li>
-                <img src="<?= Url::to(['images/sydan.png']) ?>" onClick="setEmoji('sydan')" />
-            </li>
-        </ul>
-    </div>
-        <!-- <div class="emoji-container">
-        <ul class="emojilist">
-            <li>
-                <img src="<?= Url::to(['images/hammennys.png']) ?>" onClick="setEmoji('hammennys')" />
-            </li>
-            <li>
-                <img src="<?= Url::to(['images/hilpea.png']) ?>" onClick="setEmoji('hilpea')" />
-            </li>
-            <li>
-                <img src="<?= Url::to(['images/piina.png']) ?>" onClick="setEmoji('piina')" />
-            </li>
-            <li>
-                <img src="<?= Url::to(['images/liikuttava.png']) ?>" onClick="setEmoji('liikuttava')" />
-            </li>
-            <li>
-                <img src="<?= Url::to(['images/sydan.png']) ?>" onClick="setEmoji('sydan')" />
-            </li>
-        </ul>
-    </div> -->
-        <!-- <div class="reactions-container">
-             <div class="reactions-wrapper"></div>
-        </div> -->
-    </div>
+    <div class="row">
+        
     
+        <div class="col-sm-8 video-container">
+            <video id="video" width="640" height="360" crossOrigin="anonymous" controls class="video-js vjs-default-skin vjs-big-play-centered">
+                Your browser does not support HTML5 video.
+                
+            </video>
+            <div class="emoji-container2">
+                <ul class="emojilist2">
+                    <li>
+                        <img src="<?= Url::to(['images/hammennys.png']) ?>" onClick="setEmoji('hammennys')" />
+                    </li>
+                    <li>
+                        <img src="<?= Url::to(['images/hilpea.png']) ?>" onClick="setEmoji('hilpea')" />
+                    </li>
+                    <li>
+                        <img src="<?= Url::to(['images/piina.png']) ?>" onClick="setEmoji('piina')" />
+                    </li>
+                    <li>
+                        <img src="<?= Url::to(['images/liikuttava.png']) ?>" onClick="setEmoji('liikuttava')" />
+                    </li>
+                    <li>
+                        <img src="<?= Url::to(['images/sydan.png']) ?>" onClick="setEmoji('sydan')" />
+                    </li>
+                </ul>
+             </div>
+            <!-- <div class="emoji-container">
+            <ul class="emojilist">
+                <li>
+                    <img src="<?= Url::to(['images/hammennys.png']) ?>" onClick="setEmoji('hammennys')" />
+                </li>
+                <li>
+                    <img src="<?= Url::to(['images/hilpea.png']) ?>" onClick="setEmoji('hilpea')" />
+                </li>
+                <li>
+                    <img src="<?= Url::to(['images/piina.png']) ?>" onClick="setEmoji('piina')" />
+                </li>
+                <li>
+                    <img src="<?= Url::to(['images/liikuttava.png']) ?>" onClick="setEmoji('liikuttava')" />
+                </li>
+                <li>
+                    <img src="<?= Url::to(['images/sydan.png']) ?>" onClick="setEmoji('sydan')" />
+                </li>
+            </ul>
+        </div> -->
+            <!-- <div class="reactions-container">
+                 <div class="reactions-wrapper"></div>
+            </div> -->
+        </div>
+        <div class="col-sm-4">
+            <div class="result-reactions single-movie-reaction">
+                <div class="result-reaction top3">
+                    <img src="<?= Url::to(['images/hammennys.png']) ?>" /><span>50%</span>
+                </div>
+            </div>
+            <p><?=$model->description ?></p>
+            
+        </div>
+    </div>
 
     
 
