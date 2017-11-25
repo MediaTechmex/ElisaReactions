@@ -38,7 +38,11 @@ $this->title = 'Movies';
     <div class="timeline-wrapper">
         <input type="range" min="0" max="100" value="0" class="slider" id="timeline">
     </div>
-    <button onClick="setEmoji('smile')">Smile motherfucker!</button>
+    <button onClick="setEmoji('smile')">Smile!</button>
+    <button onClick="setEmoji('cry')">Cry!</button>
+    <button onClick="setEmoji('love')">Love!</button>
+    <button onClick="setEmoji('wow')">Wow!</button>
+    <button onClick="setEmoji('hate')">Hate!</button>
     <button onClick="updateList()">update!</button>
     <ul id="templist">
         
@@ -63,7 +67,7 @@ $this->title = 'Movies';
         console.log('Set emoji fired');
         var timeNow = movieTimeline.value;
         var time = '';
-        var emoji = '<img style="left:' + timeNow + '%" src="images/emoji_5.png" class="timeline-emoji" />'
+        var emoji = '<img style="left:' + timeNow + '%" src="images/' + type + '.png" class="timeline-emoji" />'
 
         reactionsTimeline.insertAdjacentHTML('beforeend', emoji);
 
