@@ -1,4 +1,6 @@
-
+.movie-index{
+    padding-top:60px;
+}
 .movie-content img{
     width:100%;
 }
@@ -7,12 +9,22 @@
 .timeline-wrapper{
     padding-bottom:0px;
 }
-.reactions-wrapper{
-    width:100%;
-
-    height:40px;
+.video-container{
     position: relative;
-    margin-top:100px;
+}
+.reactions-container{
+    width:640px;
+    position: relative;
+}
+.reactions-wrapper{
+    /* width:100%; */
+    position: absolute;
+    bottom:20px;
+    left:80px;
+    right:100px;
+    height:40px;
+    /* background-color:red; */
+    /* margin-top:100px; */
     /* margin-bottom:50px; */
 }
 button{
@@ -20,11 +32,16 @@ button{
 }
 .timeline-emoji{
     position: absolute;
-    height:40px;
-    top:0;
+    height:20px;
+    bottom:0;
     left:0;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+    transition: all 150ms ease-in-out;
+    /* pointer-events: none; */
+}
+.timeline-emoji:hover{
+    height:30px;
 }
 
 ul.emojilist{

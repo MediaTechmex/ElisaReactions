@@ -51,42 +51,40 @@ $this->registerJs('requirejs.config({
   });'
 );
 ?>
-<div class="movie-index">
+<div class="movie-index container">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <div><?=$model->description ?></div>
     <div><image src="<?= $model->picture_url ?>"/></div>
-    <div>
+    <div class="video-container">
         <video id="video" width="640" height="360" crossOrigin="anonymous" controls class="video-js vjs-default-skin vjs-big-play-centered">
             Your browser does not support HTML5 video.
+            
         </video>
+        <div class="reactions-container">
+             <div class="reactions-wrapper"></div>
+        </div>
     </div>
     
-    <div class="reactions-wrapper">
-        
-    </div>
-    <div class="timeline-wrapper">
-        <input type="range" min="0" max="100" value="0" class="slider" id="timeline">
-    </div>
 
     
 
     <div class="emoji-container">
     <ul class="emojilist">
         <li>
-            <img src="images/smile.png" onClick="setEmoji('smile')" />
+            <img src="<?= Url::to(['images/hammennys.png']) ?>" onClick="setEmoji('hammennys')" />
         </li>
         <li>
-            <img src="images/cry.png" onClick="setEmoji('cry')" />
+            <img src="<?= Url::to(['images/hilpea.png']) ?>" onClick="setEmoji('hilpea')" />
         </li>
         <li>
-            <img src="images/love.png" onClick="setEmoji('love')" />
+            <img src="<?= Url::to(['images/piina.png']) ?>" onClick="setEmoji('piina')" />
         </li>
         <li>
-            <img src="images/wow.png" onClick="setEmoji('wow')" />
+            <img src="<?= Url::to(['images/liikuttava.png']) ?>" onClick="setEmoji('liikuttava')" />
         </li>
         <li>
-            <img src="images/hate.png" onClick="setEmoji('hate')" />
+            <img src="<?= Url::to(['images/sydan.png']) ?>" onClick="setEmoji('sydan')" />
         </li>
     </ul>
 </div>
@@ -98,22 +96,29 @@ $this->registerJs('requirejs.config({
 
 <script>
     var movieTimeline = document.getElementById('timeline');
+    var video = document.getElementsByClassName('video-js')[0];
     var reactionsTimeline = document.getElementsByClassName('reactions-wrapper')[0];
-    console.log(reactionsTimeline);
+    console.log(video);
     
+    // video.insertAdjacentHTML('beforeend', '');
 
     var reactionList = [];
     var reaction = {
             'type': 'type',
             'pointOnTimeline': 'timeNow'
         };
+        // var timeline;
     
 
     function setEmoji(type){
         console.log('Set emoji fired');
-        var timeNow = movieTimeline.value;
-        var time = '';
-        var emoji = '<img style="left:' + timeNow + '%" src="images/' + type + '.png" class="timeline-emoji" />'
+        var sliderPercentage = document.getElementsByClassName('vjs-slider-horizontal')[1].getAttribute('aria-valuenow');
+        console.log(sliderPercentage);
+        var timeNow = sliderPercentage;
+
+        
+
+        var emoji = '<img style="left:' + timeNow + '%" src="../images/' + type + '.png" class="timeline-emoji" />'
 
         reactionsTimeline.insertAdjacentHTML('beforeend', emoji);
 
@@ -121,10 +126,10 @@ $this->registerJs('requirejs.config({
             'type': type,
             'pointOnTimeline': timeNow
         };
-        reactionList.push(reaction);
+        // reactionList.push(reaction);
 
         /** Testing */
-        updateList();
+        // updateList();
         
     }
 
@@ -139,6 +144,6 @@ $this->registerJs('requirejs.config({
     
 
 
-
+// var sliderPercentage = document.getElementsByClassName('vsj-slider')[0].getAttribute('aria-valuenow');
 
 </script>
