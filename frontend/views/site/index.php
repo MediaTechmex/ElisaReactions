@@ -5,7 +5,7 @@ use yii\helpers\Html;
 
 $this->title = 'My Yii Application';
 ?>
-<div class="site-index">
+<div class="container">
 <div class="intro">
     <div class="jumbotron">
     <span class="aboveHeading">Elokuva-</span>
@@ -53,7 +53,7 @@ $this->title = 'My Yii Application';
                     <div class="slider-wrapper">
                         <div class="slider">
                             <div class="slider-inner liikuttava"></div>
-                            <img src="images/liikuttava2.png" />
+                            <img src="images/liikuttava.png" />
                             <p>Liikuttava</p>
                         </div>
                     </div>
@@ -76,20 +76,29 @@ $this->title = 'My Yii Application';
             </div>
         </div>
 </div>
+</div>
+<div class="header-wrapper">
+<h2>Tulokset</h2>
+</div>
+<div id="results" class="container-fluid results">
+    <div class="container">
         <div class="results-row row">
             <div class="col-sm-12">
-                <h2>Tulokset</h2>
+                
 
                 <div class="row">
                     <?php
                     foreach ($models as $model){
-                        echo '<div class="col-sm-3">';
+                        echo '<div class="col-sm-4">';
+                        
                         echo '<div class="result-inner">';
+                        echo '<div class="result-reactions"><div class="result-reaction top3"><img src="images/hammennys.png" /><span>50%</span></div></div>';
+                        echo '<div class="result-wrapper">';
                         echo "<img src=\"$model->picture_url\" />";
                         echo "<h3>$model->name</h3>";
                         echo "<p>$model->description</p>";
-                        echo Html::a('Katso',['movie/index','id'=>$model->id],['class'=>'btn']);
-                        echo '</div>';
+                        echo Html::a('Katso',['movie/index','id'=>$model->id],['class'=>'btn btn-orange btn-fw']);
+                        echo '</div></div>';
                         echo '</div>';
                     }
                     ?>
@@ -98,9 +107,10 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
         </div>
-
-    <!-- </div> -->
+        </div>
 </div>
+    <!-- </div> -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/jquery.roundslider/1.3/roundslider.min.js"></script>
 <script>

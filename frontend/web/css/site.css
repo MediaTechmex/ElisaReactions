@@ -2,6 +2,7 @@
 @import url(//db.onlinewebfonts.com/c/9c6548c5500714092f1d1e2f7e3c58cc?family=Verlag);
 @import "slider.css";
 @import "movie.css";
+@import "results.css";
 
 
 @font-face {font-family: "Verlag";
@@ -177,4 +178,8 @@ body{
 }
 .navbar-inverse .navbar-nav > li > a:hover:after{
     height:3px;
+}
+.navbar-inverse{
+    border: none !important;
+    box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.3);
 }
