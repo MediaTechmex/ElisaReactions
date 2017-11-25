@@ -25,18 +25,18 @@ $this->title = 'My Yii Application';
                     <div class="emoji-slider">
                     <div class="slider-wrapper">
                         <div class="slider">
-                            <div class="slider-inner hammennys"></div>
-                            <img src="images/hammennys.png" />
-                            <p>Hämmennys</p>
+                            <div class="slider-inner hilpea"></div>
+                            <img src="images/hilpea.png" />
+                            <p>Hilpeä</p>
                         </div>
                     </div>
                 </div>
                 <div class="emoji-slider">
                     <div class="slider-wrapper">
                         <div class="slider">
-                            <div class="slider-inner hilpea"></div>
-                            <img src="images/hilpea.png" />
-                            <p>Hilpeä</p>
+                            <div class="slider-inner hammennys"></div>
+                            <img src="images/hammennys.png" />
+                            <p>Hämmennys</p>
                         </div>
                     </div>
                 </div>
@@ -77,10 +77,11 @@ $this->title = 'My Yii Application';
         </div>
 </div>
 </div>
-<div class="header-wrapper">
-<h2>Tulokset</h2>
-</div>
+
 <div id="results" class="container-fluid results">
+    <div class="header-wrapper">
+        <h2>Tunteisiin sopivat elokuvat</h2>
+    </div>
     <div class="container">
         <div class="results-row row">
             <div class="col-sm-12">
