@@ -8,14 +8,14 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Movies';
-$this->params['breadcrumbs'][] = $this->title;
+// $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="movie-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <!-- <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
+    <p>asd
         <?= Html::a('Create Movie', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
@@ -29,5 +29,106 @@ $this->params['breadcrumbs'][] = $this->title;
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
-    ]); ?>
+    ]); ?> -->
+
+    
+    <div class="reactions-wrapper">
+        
+    </div>
+    <div class="timeline-wrapper">
+        <input type="range" min="0" max="100" value="0" class="slider" id="timeline">
+    </div>
+
+    <!-- <div class="emoji-container">
+        <div class="emoji-wrapper">
+        
+        </div>
+        <div class="emoji-wrapper">
+        <img src="images/cry.png" onClick="setEmoji('cry')" />
+
+        </div>
+        <div class="emoji-wrapper">
+        <img src="images/love.png" onClick="setEmoji('love')" />
+
+        </div>
+        <div class="emoji-wrapper">
+        <img src="images/wow.png" onClick="setEmoji('wow')" />
+
+        </div>
+        <div class="emoji-wrapper">
+        <img src="images/hate.png" onClick="setEmoji('hate')" />
+
+        </div>
+
+    </div> -->
+
+    <div class="emoji-container">
+        <ul class="emojilist">
+            <li>
+                <img src="images/smile.png" onClick="setEmoji('smile')" />
+            </li>
+            <li>
+                <img src="images/cry.png" onClick="setEmoji('cry')" />
+            </li>
+            <li>
+                <img src="images/love.png" onClick="setEmoji('love')" />
+            </li>
+            <li>
+                <img src="images/wow.png" onClick="setEmoji('wow')" />
+            </li>
+            <li>
+                <img src="images/hate.png" onClick="setEmoji('hate')" />
+            </li>
+        </ul>
+    </div>
+    <ul id="templist">
+        
+    </ul>
 </div>
+
+
+<script>
+    var movieTimeline = document.getElementById('timeline');
+    var reactionsTimeline = document.getElementsByClassName('reactions-wrapper')[0];
+    console.log(reactionsTimeline);
+    
+
+    var reactionList = [];
+    var reaction = {
+            'type': 'type',
+            'pointOnTimeline': 'timeNow'
+        };
+    
+
+    function setEmoji(type){
+        console.log('Set emoji fired');
+        var timeNow = movieTimeline.value;
+        var time = '';
+        var emoji = '<img style="left:' + timeNow + '%" src="images/' + type + '.png" class="timeline-emoji" />'
+
+        reactionsTimeline.insertAdjacentHTML('beforeend', emoji);
+
+        var reaction = {
+            'type': type,
+            'pointOnTimeline': timeNow
+        };
+        reactionList.push(reaction);
+
+        /** Testing */
+        updateList();
+        
+    }
+
+    function updateList(){
+        document.getElementById('templist').innerHTML = '';
+
+        for(var i=0; i<reactionList.length; i++){
+            // console.log(reactionList[i].type);
+            document.getElementById('templist').insertAdjacentHTML('beforeend', '<li>' + reactionList[i].type + ', ' + reactionList[i].pointOnTimeline +'</li>');
+        }
+    }
+    
+
+
+
+</script>
