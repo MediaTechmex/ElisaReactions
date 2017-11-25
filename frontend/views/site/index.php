@@ -7,47 +7,185 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>Search for movies!</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">Use the sliders below to set your current feelings.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <!-- <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p> -->
     </div>
 
     <div class="body-content">
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+        <div class="slider-row row">
+            <div class="col-sm-12">
+                <div id="sliders" class="search-sliders">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="slider-wrapper">
+                                <div class="slider">
+                                    <div class="slider-inner happy"></div>
+                                    <img src="images/confusing.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="slider-wrapper">
+                                <div class="slider">
+                                    <div class="slider-inner angry"></div>
+                                    <img src="images/touching.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="slider-wrapper">
+                                <div class="slider">
+                                    <div class="slider-inner yay"></div>
+                                    <img src="images/emoji_7.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="slider-wrapper">
+                                <div class="slider">
+                                    <div class="slider-inner love"></div>
+                                    <img src="images/emoji_3.png" />
+                                </div>
+                            </div>
+                        </div>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                    </div>
+                    
+                    
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+        </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+        <div class="results-row row">
+            <div class="col-sm-12">
+                <h2>Tulokset</h2>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/jquery.roundslider/1.3/roundslider.min.js"></script>
+<script>
+    $(".happy").roundSlider({
+        startAngle: 90,
+        radius: 80,
+        width: 8,
+        handleSize: "+16",
+        handleShape: "dot",
+        sliderType: "min-range",
+        value: 50,
+        showTooltip: false,
+    });
+    $(".angry").roundSlider({
+        startAngle: 90,
+        radius: 80,
+        width: 8,
+        handleSize: "+16",
+        handleShape: "dot",
+        sliderType: "min-range",
+        value: 50,
+        showTooltip: false,
+    });
+    $(".yay").roundSlider({
+        startAngle: 90,
+        radius: 80,
+        width: 8,
+        handleSize: "+16",
+        handleShape: "dot",
+        sliderType: "min-range",
+        value: 50,
+        showTooltip: false,
+    });
+    $(".love").roundSlider({
+        startAngle: 90,
+        radius: 80,
+        width: 8,
+        handleSize: "+16",
+        handleShape: "dot",
+        sliderType: "min-range",
+        value: 50,
+        showTooltip: false,
+    });
+    
+</script>

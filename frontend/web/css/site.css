@@ -1,3 +1,6 @@
+@import "slider.css";
+@import "movie.css";
+
 html,
 body {
     height: 100%;

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "78942e2d02a71ea6b3fe7b2633f74d91",
+    "content-hash": "efbaa4620b38bf00b59f2070fbe09b70",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -166,39 +166,6 @@
                 "markdown-extra"
             ],
             "time": "2017-07-16T21:13:23+00:00"
-        },
-        {
-            "name": "dmitriyha/yii2-advanced-template-init",
-            "version": "v0.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dmitriyha/yii2-advanced-template-init.git",
-                "reference": "876bed5f904a0c31e5b0fc9ad692ac329e9f1a8e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dmitriyha/yii2-advanced-template-init/zipball/876bed5f904a0c31e5b0fc9ad692ac329e9f1a8e",
-                "reference": "876bed5f904a0c31e5b0fc9ad692ac329e9f1a8e",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": ">=2.0.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "dmitriyha\\Yii2AdvancedTemplateInit\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Dmitriy Haralson",
-                    "email": "diharalson@gmail.com"
-                }
-            ],
-            "description": "Console utility to initialize and reinitialze a Yii2 application",
-            "time": "2017-11-14T18:02:56+00:00"
         },
         {
             "name": "doctrine/lexer",
