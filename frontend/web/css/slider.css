@@ -1,3 +1,4 @@
+
 .intro{
     /* background-color: #404041; */
     padding-top:60px;
@@ -31,9 +32,7 @@
     width:160px;
     display: block;
     margin:0 auto;
-    
 }
-
 .slider-inner + img{
     position: absolute;
     left:50%;
@@ -42,6 +41,7 @@
     z-index: 10; 
     width:60%;
 }  
+
 .slider p{
     position: absolute;
     text-align: center;
@@ -69,10 +69,12 @@
 .slider-inner .rs-handle:after  {
     border-color: #ff9900;
     background-color: #ff9900;
+
 }
 .slider-inner .rs-border  {
     border-color: transparent;
 }
+
 .rs-bg-color {
     /* background-color: #6f6f70; */
 }
@@ -81,6 +83,7 @@
     width:20%;
     float:left;
 }
+
 
 .slider-wrapper{
     width:100%;

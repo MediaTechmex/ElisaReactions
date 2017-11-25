@@ -21,7 +21,9 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,700,800,900" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.roundslider/1.3/roundslider.min.css" />
     <?php $this->head() ?>
 </head>

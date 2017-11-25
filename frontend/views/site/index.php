@@ -8,10 +8,12 @@ $this->title = 'My Yii Application';
     <div class="intro">
 
     <div class="jumbotron">
+
         <span class="aboveHeading">Elokuva-</span>
         <h1>Fiilis</h1>
 
         <p class="lead">Mitä haluat tuntea?</p>
+
 
         <!-- <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p> -->
     </div>
@@ -23,6 +25,7 @@ $this->title = 'My Yii Application';
                 <div id="sliders" class="search-sliders">
 
                     <div class="row">
+
                         <div class="emoji-slider">
                             <div class="slider-wrapper">
                                 <div class="slider">
@@ -65,6 +68,7 @@ $this->title = 'My Yii Application';
                                     <div class="slider-inner sydan"></div>
                                     <img src="images/sydan.png" />
                                     <p>Ihastuttava</p>
+
                                 </div>
                             </div>
                         </div>
@@ -76,7 +80,9 @@ $this->title = 'My Yii Application';
             </div>
         </div>
 
+
 </div>
+
 
         <div class="results-row row">
             <div class="col-sm-12">
@@ -175,6 +181,7 @@ $this->title = 'My Yii Application';
         showTooltip: true,
     });
     $(".hilpea").roundSlider({
+
         startAngle: 90,
         radius: 80,
         width: 8,
@@ -184,7 +191,9 @@ $this->title = 'My Yii Application';
         value: 50,
         showTooltip: false,
     });
+
     $(".piina").roundSlider({
+
         startAngle: 90,
         radius: 80,
         width: 8,
@@ -194,7 +203,9 @@ $this->title = 'My Yii Application';
         value: 50,
         showTooltip: false,
     });
+
     $(".liikuttava").roundSlider({
+
         startAngle: 90,
         radius: 80,
         width: 8,
@@ -204,7 +215,9 @@ $this->title = 'My Yii Application';
         value: 50,
         showTooltip: false,
     });
+
     $(".sydan").roundSlider({
+
         startAngle: 90,
         radius: 80,
         width: 8,

@@ -31,6 +31,7 @@ $this->title = 'Movies';
         ],
     ]); ?> -->
 
+
     <div class="movie-content row">
         <div class="col-sm-6">
             <img src="https://placeimg.com/640/480/tech" />
@@ -45,6 +46,7 @@ $this->title = 'Movies';
     </div>
 
 <div id="video">
+
     <div class="reactions-wrapper">
         
     </div>
@@ -52,7 +54,6 @@ $this->title = 'Movies';
         <input type="range" min="0" max="100" value="0" class="slider" id="timeline">
     </div>
 
-    
 
     <div class="emoji-container">
         <ul class="emojilist">
@@ -79,6 +80,7 @@ $this->title = 'Movies';
 
 </div>
 </div>
+
 
 
 <script>
