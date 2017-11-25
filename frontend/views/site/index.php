@@ -27,6 +27,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner hilpea"></div>
                             <img src="images/hilpea.png" />
+                            <p class="slider-value hilpea-val">50 %</p>
                             <p>Hilpeä</p>
                         </div>
                     </div>
@@ -36,6 +37,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner hammennys"></div>
                             <img src="images/hammennys.png" />
+                            <p class="slider-value hammennys-val">50 %</p>
                             <p>Hämmennys</p>
                         </div>
                     </div>
@@ -45,6 +47,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner piina"></div>
                             <img src="images/piina.png" />
+                            <p class="slider-value piina-val">50 %</p>
                             <p>Piina</p>
                         </div>
                     </div>
@@ -54,6 +57,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner liikuttava"></div>
                             <img src="images/liikuttava.png" />
+                            <p class="slider-value liikuttava-val">50 %</p>
                             <p>Liikuttava</p>
                         </div>
                     </div>
@@ -63,6 +67,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner sydan"></div>
                             <img src="images/sydan.png" />
+                            <p class="slider-value sydan-val">50 %</p>
                             <p>Ihastuttava</p>
 
                         </div>
@@ -124,6 +129,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: 50,
         showTooltip: true,
+        change: function(event, ui) { 
+          $(".hammennys-val").text(event.value + ' %');
+        }
     });
     $(".hilpea").roundSlider({
 
@@ -135,6 +143,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: 50,
         showTooltip: false,
+        change: function(event, ui) { 
+          $(".hilpea-val").text(event.value + ' %');
+        }
     });
 
     $(".piina").roundSlider({
@@ -147,6 +158,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: 50,
         showTooltip: false,
+        change: function(event, ui) { 
+          $(".piina-val").text(event.value + ' %');
+        }
     });
 
     $(".liikuttava").roundSlider({
@@ -159,6 +173,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: 50,
         showTooltip: false,
+        change: function(event, ui) { 
+          $(".liikuttava-val").text(event.value + ' %');
+        }
     });
 
     $(".sydan").roundSlider({
@@ -171,6 +188,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: 50,
         showTooltip: false,
+        change: function(event, ui) { 
+          $(".sydan-val").text(event.value + ' %');
+        }
     });
     
 
