@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Html;
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
@@ -11,7 +11,6 @@ $this->title = 'My Yii Application';
 
         <p class="lead">Use the sliders below to set your current feelings.</p>
 
-        <!-- <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p> -->
     </div>
 
     <div class="body-content">
@@ -66,78 +65,19 @@ $this->title = 'My Yii Application';
                 <h2>Tulokset</h2>
 
                 <div class="row">
-                    <div class="col-sm-3">
-                        <div class="result-inner">
-                            <img src="https://placeimg.com/320/180/any" />
-                            <h3>Star Wars V</h3>
-                            <p>Lorem ipsum jee jee kebab</p>
-                            <a href="#" class="btn">Katso!</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="result-inner">
-                            <img src="https://placeimg.com/320/180/any" />
-                            <h3>Star Wars V</h3>
-                            <p>Lorem ipsum jee jee kebab</p>
-                            <a href="#" class="btn">Katso!</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="result-inner">
-                            <img src="https://placeimg.com/320/180/any" />
-                            <h3>Star Wars V</h3>
-                            <p>Lorem ipsum jee jee kebab</p>
-                            <a href="#" class="btn">Katso!</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="result-inner">
-                            <img src="https://placeimg.com/320/180/any" />
-                            <h3>Star Wars V</h3>
-                            <p>Lorem ipsum jee jee kebab</p>
-                            <a href="#" class="btn">Katso!</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="result-inner">
-                            <img src="https://placeimg.com/320/180/any" />
-                            <h3>Star Wars V</h3>
-                            <p>Lorem ipsum jee jee kebab</p>
-                            <a href="#" class="btn">Katso!</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="result-inner">
-                            <img src="https://placeimg.com/320/180/any" />
-                            <h3>Star Wars V</h3>
-                            <p>Lorem ipsum jee jee kebab</p>
-                            <a href="#" class="btn">Katso!</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="result-inner">
-                            <img src="https://placeimg.com/320/180/any" />
-                            <h3>Star Wars V</h3>
-                            <p>Lorem ipsum jee jee kebab</p>
-                            <a href="#" class="btn">Katso!</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="result-inner">
-                            <img src="https://placeimg.com/320/180/any" />
-                            <h3>Star Wars V</h3>
-                            <p>Lorem ipsum jee jee kebab</p>
-                            <a href="#" class="btn">Katso!</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="result-inner">
-                            <img src="https://placeimg.com/320/180/any" />
-                            <h3>Star Wars V</h3>
-                            <p>Lorem ipsum jee jee kebab</p>
-                            <a href="#" class="btn">Katso!</a>
-                        </div>
-                    </div>
+                    <?php
+                    foreach ($models as $model){
+                        echo '<div class="col-sm-3">';
+                        echo '<div class="result-inner">';
+                        echo "<img src=\"$model->picture_url\" />";
+                        echo "<h3>$model->name</h3>";
+                        echo "<p>$model->description</p>";
+                        echo Html::a('Katso','movie/view',['class'=>'btn']);
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                    ?>
+                    
                 </div>
             </div>
         </div>
