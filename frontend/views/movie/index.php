@@ -31,7 +31,20 @@ $this->title = 'Movies';
         ],
     ]); ?> -->
 
-    
+    <div class="movie-content row">
+        <div class="col-sm-6">
+            <img src="https://placeimg.com/640/480/tech" />
+        </div>
+        <div class="col-sm-6">
+            <h1>Start Wars V</h1>
+            <div class="emotions-view">
+                <p>emotions</p>
+            </div>
+            <a href="#" onClick="openVideo()" class="btn">Katso</a>
+        </div>
+    </div>
+
+<div id="video">
     <div class="reactions-wrapper">
         
     </div>
@@ -39,28 +52,7 @@ $this->title = 'Movies';
         <input type="range" min="0" max="100" value="0" class="slider" id="timeline">
     </div>
 
-    <!-- <div class="emoji-container">
-        <div class="emoji-wrapper">
-        
-        </div>
-        <div class="emoji-wrapper">
-        <img src="images/cry.png" onClick="setEmoji('cry')" />
-
-        </div>
-        <div class="emoji-wrapper">
-        <img src="images/love.png" onClick="setEmoji('love')" />
-
-        </div>
-        <div class="emoji-wrapper">
-        <img src="images/wow.png" onClick="setEmoji('wow')" />
-
-        </div>
-        <div class="emoji-wrapper">
-        <img src="images/hate.png" onClick="setEmoji('hate')" />
-
-        </div>
-
-    </div> -->
+    
 
     <div class="emoji-container">
         <ul class="emojilist">
@@ -84,6 +76,8 @@ $this->title = 'Movies';
     <ul id="templist">
         
     </ul>
+
+</div>
 </div>
 
 
