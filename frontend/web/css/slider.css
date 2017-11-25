@@ -42,13 +42,21 @@
     width:60%;
 }  
 
+.slider .slider-value{
+    position: absolute;
+    text-align: center;
+    margin-top: 15px;
+    color: #ff9900;
+    font-size: 20px
+}
+
 .slider p{
     position: absolute;
     text-align: center;
     width:100%;
     pointer-events: none;
     font-size:17px;
-    margin-top:25px;
+    margin-top:45px;
     color:#666;
 }
 
