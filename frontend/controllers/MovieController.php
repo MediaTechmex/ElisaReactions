@@ -33,14 +33,11 @@ class MovieController extends Controller
      * Lists all Movie models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($id)
     {
-        $searchModel = new MovieSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        $model = $this->findModel($id);
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'model'=>$model
         ]);
     }
 
