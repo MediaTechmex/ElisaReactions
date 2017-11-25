@@ -16,7 +16,7 @@ $this->title = 'My Yii Application';
 
     <div class="body-content">
 
-        <div class="row">
+        <div class="slider-row row">
             <div class="col-sm-12">
                 <div id="sliders" class="search-sliders">
 
@@ -25,7 +25,7 @@ $this->title = 'My Yii Application';
                             <div class="slider-wrapper">
                                 <div class="slider">
                                     <div class="slider-inner happy"></div>
-                                    <img src="images/emoji_1.png" />
+                                    <img src="images/confusing.png" />
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@ $this->title = 'My Yii Application';
                             <div class="slider-wrapper">
                                 <div class="slider">
                                     <div class="slider-inner angry"></div>
-                                    <img src="images/emoji_5.png" />
+                                    <img src="images/touching.png" />
                                 </div>
                             </div>
                         </div>
@@ -57,6 +57,87 @@ $this->title = 'My Yii Application';
                     </div>
                     
                     
+                </div>
+            </div>
+        </div>
+
+        <div class="results-row row">
+            <div class="col-sm-12">
+                <h2>Tulokset</h2>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="result-inner">
+                            <img src="https://placeimg.com/320/180/any" />
+                            <h3>Star Wars V</h3>
+                            <p>Lorem ipsum jee jee kebab</p>
+                            <a href="#" class="btn">Katso!</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

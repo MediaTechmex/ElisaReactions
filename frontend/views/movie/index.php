@@ -38,12 +38,49 @@ $this->title = 'Movies';
     <div class="timeline-wrapper">
         <input type="range" min="0" max="100" value="0" class="slider" id="timeline">
     </div>
-    <button onClick="setEmoji('smile')">Smile!</button>
-    <button onClick="setEmoji('cry')">Cry!</button>
-    <button onClick="setEmoji('love')">Love!</button>
-    <button onClick="setEmoji('wow')">Wow!</button>
-    <button onClick="setEmoji('hate')">Hate!</button>
-    <button onClick="updateList()">update!</button>
+
+    <!-- <div class="emoji-container">
+        <div class="emoji-wrapper">
+        
+        </div>
+        <div class="emoji-wrapper">
+        <img src="images/cry.png" onClick="setEmoji('cry')" />
+
+        </div>
+        <div class="emoji-wrapper">
+        <img src="images/love.png" onClick="setEmoji('love')" />
+
+        </div>
+        <div class="emoji-wrapper">
+        <img src="images/wow.png" onClick="setEmoji('wow')" />
+
+        </div>
+        <div class="emoji-wrapper">
+        <img src="images/hate.png" onClick="setEmoji('hate')" />
+
+        </div>
+
+    </div> -->
+
+    <div class="emoji-container">
+        <ul class="emojilist">
+            <li>
+                <img src="images/smile.png" onClick="setEmoji('smile')" />
+            </li>
+            <li>
+                <img src="images/cry.png" onClick="setEmoji('cry')" />
+            </li>
+            <li>
+                <img src="images/love.png" onClick="setEmoji('love')" />
+            </li>
+            <li>
+                <img src="images/wow.png" onClick="setEmoji('wow')" />
+            </li>
+            <li>
+                <img src="images/hate.png" onClick="setEmoji('hate')" />
+            </li>
+        </ul>
+    </div>
     <ul id="templist">
         
     </ul>
@@ -77,10 +114,13 @@ $this->title = 'Movies';
         };
         reactionList.push(reaction);
 
+        /** Testing */
+        updateList();
         
     }
 
     function updateList(){
+        document.getElementById('templist').innerHTML = '';
 
         for(var i=0; i<reactionList.length; i++){
             // console.log(reactionList[i].type);
