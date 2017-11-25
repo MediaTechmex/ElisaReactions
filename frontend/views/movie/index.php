@@ -1,3 +1,4 @@
+
 <?php
 
 use yii\helpers\Html;
@@ -71,24 +72,24 @@ $this->registerJs('requirejs.config({
     
 
     <div class="emoji-container">
-        <ul class="emojilist">
-            <li>
-                <img src="images/smile.png" onClick="setEmoji('smile')" />
-            </li>
-            <li>
-                <img src="images/cry.png" onClick="setEmoji('cry')" />
-            </li>
-            <li>
-                <img src="images/love.png" onClick="setEmoji('love')" />
-            </li>
-            <li>
-                <img src="images/wow.png" onClick="setEmoji('wow')" />
-            </li>
-            <li>
-                <img src="images/hate.png" onClick="setEmoji('hate')" />
-            </li>
-        </ul>
-    </div>
+    <ul class="emojilist">
+        <li>
+            <img src="images/smile.png" onClick="setEmoji('smile')" />
+        </li>
+        <li>
+            <img src="images/cry.png" onClick="setEmoji('cry')" />
+        </li>
+        <li>
+            <img src="images/love.png" onClick="setEmoji('love')" />
+        </li>
+        <li>
+            <img src="images/wow.png" onClick="setEmoji('wow')" />
+        </li>
+        <li>
+            <img src="images/hate.png" onClick="setEmoji('hate')" />
+        </li>
+    </ul>
+</div>
     <ul id="templist">
         
     </ul>
@@ -136,6 +137,7 @@ $this->registerJs('requirejs.config({
         }
     }
     
+
 
 
 
