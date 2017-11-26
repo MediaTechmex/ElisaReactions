@@ -1,6 +1,8 @@
 
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
+use common\models\Reaction;
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
@@ -27,7 +29,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner hilpea"></div>
                             <img src="images/hilpea.png" />
-                            <p class="slider-value hilpea-val">50 %</p>
+                            <p class="slider-value hilpea-val"><?= $hilpea ?> %</p>
                             <p>Hilpeä</p>
                         </div>
                     </div>
@@ -37,7 +39,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner hammennys"></div>
                             <img src="images/hammennys.png" />
-                            <p class="slider-value hammennys-val">50 %</p>
+                            <p class="slider-value hammennys-val"><?= $hammennys ?> %</p>
                             <p>Hämmennys</p>
                         </div>
                     </div>
@@ -47,7 +49,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner piina"></div>
                             <img src="images/piina.png" />
-                            <p class="slider-value piina-val">50 %</p>
+                            <p class="slider-value piina-val"><?= $piina ?> %</p>
                             <p>Piina</p>
                         </div>
                     </div>
@@ -57,7 +59,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner liikuttava"></div>
                             <img src="images/liikuttava.png" />
-                            <p class="slider-value liikuttava-val">50 %</p>
+                            <p class="slider-value liikuttava-val"><?= $liikuttava ?> %</p>
                             <p>Liikuttava</p>
                         </div>
                     </div>
@@ -67,7 +69,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner sydan"></div>
                             <img src="images/sydan.png" />
-                            <p class="slider-value sydan-val">50 %</p>
+                            <p class="slider-value sydan-val"><?= $sydan ?> %</p>
                             <p>Ihastuttava</p>
 
                         </div>
@@ -75,7 +77,7 @@ $this->title = 'My Yii Application';
                 </div>
 
                     </div>
-                    
+                    <button class='btn btn-orange btn-fw btn-feel' onclick="valueGet();">Fiilis!</button>
                     
                 </div>
             </div>
@@ -95,10 +97,17 @@ $this->title = 'My Yii Application';
                 <div class="row">
                     <?php
                     foreach ($models as $model){
+                        $reactions = $model->sortedReactions;
                         echo '<div class="col-sm-4">';
-                        
                         echo '<div class="result-inner">';
-                        echo '<div class="result-reactions"><div class="result-reaction top3"><img src="images/hammennys.png" /><span>50%</span></div></div>';
+                        echo '<div class="result-reactions">'
+                        . '<div class="result-reaction top3">';
+                        foreach ($reactions as $reaction => $percent){
+                            echo '<img src="'.Url::to(['images/'.$reaction.'.png']).'" />';
+                            echo "<span>$percent%</span>";
+                        }
+                        echo '</div>'
+                        . '</div>';
                         echo '<div class="result-wrapper">';
                         echo "<img src=\"$model->picture_url\" />";
                         echo "<h3>$model->name</h3>";
@@ -127,7 +136,7 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?=$hammennys ?>,
         showTooltip: true,
         change: function(event, ui) { 
           $(".hammennys-val").text(event.value + ' %');
@@ -141,7 +150,7 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?=$hilpea  ?>,
         showTooltip: false,
         change: function(event, ui) { 
           $(".hilpea-val").text(event.value + ' %');
@@ -156,7 +165,7 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?= $piina ?>,
         showTooltip: false,
         change: function(event, ui) { 
           $(".piina-val").text(event.value + ' %');
@@ -171,7 +180,7 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?= $liikuttava ?>,
         showTooltip: false,
         change: function(event, ui) { 
           $(".liikuttava-val").text(event.value + ' %');
@@ -186,12 +195,20 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?= $sydan ?>,
         showTooltip: false,
         change: function(event, ui) { 
           $(".sydan-val").text(event.value + ' %');
         }
     });
     
+    function valueGet(){
+        window.location.href = '<?= Url::to(['site/index',]) ?>'+'\
+?hammennys='+$('.hammennys > input').attr('value')+ '\
+&hilpea='+ $('.hilpea > input').attr('value')+ '\
+&piina='+$('.piina > input').attr('value')+ '\
+&liikuttava='+$('.piina > input').attr('value')+ '\
+&sydan='+$('.sydan > input').attr('value');
+    }
 
 </script>
