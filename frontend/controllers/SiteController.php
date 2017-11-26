@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use common\models\Movie;
+use common\models\Reaction;
 use common\models\MovieSearch;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
@@ -72,10 +73,43 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($hammennys = 50, $hilpea = 50, $piina = 50, 
+            $liikuttva = 50, $sydan = 50)
     {
         $models = Movie::find()->all();
-        return $this->render('index',['models'=>$models]);
+        $weights = [
+            'hammennys' => $hammennys,
+            'hilpea' => $hilpea,
+            'piina'=>$piina,
+            'liikuttava'=>$liikuttva,
+            'sydan' =>$sydan
+        ];
+        
+        if($hammennys != 50 || $hilpea != 50 || $piina != 50 || $liikuttva != 50 ||
+                $sydan != 50){
+            arsort($weights);
+            Movie::$weights = $weights;
+        
+            usort($models, function($a,$b){
+                $weights = Movie::$weights;
+                $i=5;
+                $score_a = 0;
+                $score_b = 0;
+                foreach ($weights as $name => $weight){
+                    $score_a += ($a->sortedReactions[$name]*($weight*($i/5)));
+                    $score_b += ($b->sortedReactions[$name]*($weight*($i/5)));
+                }
+                if ($score_a == $score_b){
+                    return 0;
+                }
+                return ($score_a > $score_b) ? -1 : 1;
+            });
+        }
+        return $this->render('index',['models'=>$models,'hammennys' => $hammennys,
+            'hilpea' => $hilpea,
+            'piina'=>$piina,
+            'liikuttava'=>$liikuttva,
+            'sydan' =>$sydan]);
     }
 
     /**

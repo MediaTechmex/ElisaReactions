@@ -73,7 +73,7 @@ $this->title = 'My Yii Application';
 
                     </div>
                     
-                    
+                    <button onclick="valueGet();">Fiilis!</button>
                 </div>
             </div>
         </div>
@@ -91,9 +91,8 @@ $this->title = 'My Yii Application';
                 <div class="row">
                     <?php
                     foreach ($models as $model){
-                        $reactions = Reaction::countReactions($model->id);
+                        $reactions = $model->sortedReactions;
                         echo '<div class="col-sm-4">';
-                        
                         echo '<div class="result-inner">';
                         echo '<div class="result-reactions">'
                         . '<div class="result-reaction top3">';
@@ -131,7 +130,7 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?=$hammennys ?>,
         showTooltip: true,
     });
     $(".hilpea").roundSlider({
@@ -142,7 +141,7 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?=$hilpea  ?>,
         showTooltip: false,
     });
 
@@ -154,7 +153,7 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?= $piina ?>,
         showTooltip: false,
     });
 
@@ -166,7 +165,7 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?= $liikuttava ?>,
         showTooltip: false,
     });
 
@@ -178,9 +177,18 @@ $this->title = 'My Yii Application';
         handleSize: "+16",
         handleShape: "dot",
         sliderType: "min-range",
-        value: 50,
+        value: <?= $sydan ?>,
         showTooltip: false,
     });
+    
+    function valueGet(){
+        window.location.href = '<?= Url::to(['site/index',]) ?>'+'\
+?hammennys='+$('.hammennys > input').attr('value')+ '\
+&hilpea='+ $('.hilpea > input').attr('value')+ '\
+&piina='+$('.piina > input').attr('value')+ '\
+&liikuttava='+$('.piina > input').attr('value')+ '\
+&sydan='+$('.sydan > input').attr('value');
+    }
     
 
 </script>
