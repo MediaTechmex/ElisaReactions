@@ -62,3 +62,12 @@
 .btn-fw{
     width:100%;
 }
+.btn-feel{
+    margin-top: 100px;
+    font-size:20px;
+}
+.button-wrapper{
+    width:100%;
+    padding-top:50px;
+    text-align: center;
+}

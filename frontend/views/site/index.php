@@ -77,8 +77,10 @@ $this->title = 'Elisa Fiilis';
                 </div>
 
                     </div>
-                    <button class='btn btn-orange btn-fw btn-feel' onclick="valueGet();">Fiilis!</button>
                     
+                </div>
+                <div class="button-wrapper">
+                    <button class='btn btn-orange btn-center btn-feel' onclick="valueGet();">Fiilis!</button>
                 </div>
             </div>
         </div>
