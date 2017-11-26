@@ -7,6 +7,9 @@
 .movie-content img{
     width:100%;
 }
+.video-container{
+    padding-left:0;
+}
 .row.padding-top{
     padding-top: 50px;
 }
@@ -165,6 +168,7 @@ ul.emojilist:before{
 .emojilist2 > li > img{
     width:30px;
     transition: all 150ms ease-in-out;
+    cursor:pointer;
 }
 .emojilist2 > li > img:hover{
     width:50px;
