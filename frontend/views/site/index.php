@@ -77,7 +77,7 @@ $this->title = 'My Yii Application';
                 </div>
 
                     </div>
-                    <button onclick="valueGet();">Fiilis!</button>
+                    <button class='btn btn-orange btn-fw btn-feel' onclick="valueGet();">Fiilis!</button>
                     
                 </div>
             </div>

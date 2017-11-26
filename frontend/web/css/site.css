@@ -183,3 +183,7 @@ body{
     border: none !important;
     box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.3);
 }
+
+.btn-feel{
+    margin-top: 100px;
+}

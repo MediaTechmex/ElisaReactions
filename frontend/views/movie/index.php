@@ -104,15 +104,13 @@ $this->registerJs('requirejs.config({
         <div class="col-sm-4">
             <h1><?= Html::encode($this->title) ?></h1>
             <div class="single-movie-reactions">
-                <div class="single-reaction top3">
-                    <img src="<?= Url::to(['images/hammennys.png']) ?>" /><span>50%</span>
-                </div>
-                <div class="single-reaction top3">
-                    <img src="<?= Url::to(['images/hammennys.png']) ?>" /><span>50%</span>
-                </div>
-                <div class="single-reaction top3">
-                    <img src="<?= Url::to(['images/hammennys.png']) ?>" /><span>50%</span>
-                </div>
+                <?php
+                foreach($model->sortedReactions as $reaction => $percent){
+                    echo '<div class="single-reaction top3">';
+                    echo '<img src="'. Url::to(['images/'.$reaction.'.png']).'" /><span>'.$percent.'%</span>';
+                    echo '</div>';
+                }
+                ?>
             </div>
             <p><?=$model->description ?></p>
             
