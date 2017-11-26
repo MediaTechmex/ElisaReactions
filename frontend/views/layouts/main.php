@@ -34,7 +34,7 @@ AppAsset::register($this);
 
     <?php
     NavBar::begin([
-        'brandLabel' => '<img class="logo" src="images/Elisa_logo_fiilis_oranssi.png" />',
+        'brandLabel' => '<img class="logo" src="'.Url::to(['images/Elisa_logo_fiilis_oranssi.png']).'" />',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
