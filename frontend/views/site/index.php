@@ -5,7 +5,7 @@ use yii\helpers\Url;
 use common\models\Reaction;
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Elisa Fiilis';
 ?>
 <div class="container">
 <div class="intro">
