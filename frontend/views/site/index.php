@@ -27,18 +27,20 @@ $this->title = 'My Yii Application';
                     <div class="emoji-slider">
                     <div class="slider-wrapper">
                         <div class="slider">
-                            <div class="slider-inner hammennys"></div>
-                            <img src="images/hammennys.png" />
-                            <p>Hämmennys</p>
+                            <div class="slider-inner hilpea"></div>
+                            <img src="images/hilpea.png" />
+                            <p class="slider-value hilpea-val"><?= $hilpea ?> %</p>
+                            <p>Hilpeä</p>
                         </div>
                     </div>
                 </div>
                 <div class="emoji-slider">
                     <div class="slider-wrapper">
                         <div class="slider">
-                            <div class="slider-inner hilpea"></div>
-                            <img src="images/hilpea.png" />
-                            <p>Hilpeä</p>
+                            <div class="slider-inner hammennys"></div>
+                            <img src="images/hammennys.png" />
+                            <p class="slider-value hammennys-val"><?= $hammennys ?> %</p>
+                            <p>Hämmennys</p>
                         </div>
                     </div>
                 </div>
@@ -47,6 +49,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner piina"></div>
                             <img src="images/piina.png" />
+                            <p class="slider-value piina-val"><?= $piina ?> %</p>
                             <p>Piina</p>
                         </div>
                     </div>
@@ -56,6 +59,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner liikuttava"></div>
                             <img src="images/liikuttava.png" />
+                            <p class="slider-value liikuttava-val"><?= $liikuttava ?> %</p>
                             <p>Liikuttava</p>
                         </div>
                     </div>
@@ -65,6 +69,7 @@ $this->title = 'My Yii Application';
                         <div class="slider">
                             <div class="slider-inner sydan"></div>
                             <img src="images/sydan.png" />
+                            <p class="slider-value sydan-val"><?= $sydan ?> %</p>
                             <p>Ihastuttava</p>
 
                         </div>
@@ -72,17 +77,18 @@ $this->title = 'My Yii Application';
                 </div>
 
                     </div>
-                    
                     <button onclick="valueGet();">Fiilis!</button>
+                    
                 </div>
             </div>
         </div>
 </div>
 </div>
-<div class="header-wrapper">
-<h2>Tulokset</h2>
-</div>
+
 <div id="results" class="container-fluid results">
+    <div class="header-wrapper">
+        <h2>Tunteisiin sopivat elokuvat</h2>
+    </div>
     <div class="container">
         <div class="results-row row">
             <div class="col-sm-12">
@@ -132,6 +138,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: <?=$hammennys ?>,
         showTooltip: true,
+        change: function(event, ui) { 
+          $(".hammennys-val").text(event.value + ' %');
+        }
     });
     $(".hilpea").roundSlider({
 
@@ -143,6 +152,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: <?=$hilpea  ?>,
         showTooltip: false,
+        change: function(event, ui) { 
+          $(".hilpea-val").text(event.value + ' %');
+        }
     });
 
     $(".piina").roundSlider({
@@ -155,6 +167,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: <?= $piina ?>,
         showTooltip: false,
+        change: function(event, ui) { 
+          $(".piina-val").text(event.value + ' %');
+        }
     });
 
     $(".liikuttava").roundSlider({
@@ -167,6 +182,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: <?= $liikuttava ?>,
         showTooltip: false,
+        change: function(event, ui) { 
+          $(".liikuttava-val").text(event.value + ' %');
+        }
     });
 
     $(".sydan").roundSlider({
@@ -179,6 +197,9 @@ $this->title = 'My Yii Application';
         sliderType: "min-range",
         value: <?= $sydan ?>,
         showTooltip: false,
+        change: function(event, ui) { 
+          $(".sydan-val").text(event.value + ' %');
+        }
     });
     
     function valueGet(){
@@ -189,6 +210,5 @@ $this->title = 'My Yii Application';
 &liikuttava='+$('.piina > input').attr('value')+ '\
 &sydan='+$('.sydan > input').attr('value');
     }
-    
 
 </script>

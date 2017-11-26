@@ -1,16 +1,36 @@
 .movie-index{
     padding-top:60px;
+    background-color:#303031;
+    color:#fff;
+    min-height:100vh;
 }
 .movie-content img{
     width:100%;
 }
-
+.row.padding-top{
+    padding-top: 50px;
+}
+/* movie info */
+.single-movie-reactions{
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+.single-reaction{
+    width: 20%;
+    float: left;
+}
+.single-reaction img{
+    width: 50%;
+    padding-right: 5px;
+}
 
 .timeline-wrapper{
     padding-bottom:0px;
 }
 .video-container{
     position: relative;
+    /* overflow: auto; */
 }
 .reactions-container{
     width:640px;
@@ -33,12 +53,17 @@ button{
 .timeline-emoji{
     position: absolute;
     height:20px;
-    bottom:0;
+    /* bottom:0; */
     left:0;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     transition: all 150ms ease-in-out;
     /* pointer-events: none; */
+}
+#slider-emoji-container{
+    width:100%;
+    height:20px;
+    background-color:red;
 }
 .timeline-emoji:hover{
     height:30px;
@@ -104,4 +129,43 @@ ul.emojilist:before{
 }
 .emojilist > li > img:hover{
     width:130%;
+}
+
+
+.emoji-container2{
+    position: absolute;
+    left:0;
+    top:0;
+    width:20px;
+    height:100%;
+}
+.emojilist2{
+    padding:0;
+    list-style: none;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:100000000000;
+    
+}
+.emojilist2:after{
+    content:'';
+    background-color:rgba(0,0,0,0.5);
+    position: absolute;
+    top:-5px;
+    left:0;
+    width:25px;
+    bottom:-5px;
+    z-index: -1;
+    border-radius: 0 10px 10px 0;
+}
+.emojilist2 > li{
+    padding:3px;
+}
+.emojilist2 > li > img{
+    width:30px;
+    transition: all 150ms ease-in-out;
+}
+.emojilist2 > li > img:hover{
+    width:50px;
 }

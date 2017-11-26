@@ -1,11 +1,12 @@
 #results{
     background-color: #303031;
-    padding-top:60px;
+    padding-top:20px;
     padding-bottom:40px;
 }
 .header-wrapper{
     text-align: center;
-    padding:40px 0;
+    padding:10px 0 15px 0;
+    color: #fff;
 
 }
 .result-inner{
