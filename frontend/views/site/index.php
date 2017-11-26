@@ -28,7 +28,7 @@ $this->title = 'My Yii Application';
                     <div class="slider-wrapper">
                         <div class="slider">
                             <div class="slider-inner hilpea"></div>
-                            <img src="images/hilpea.png" />
+                            <img src="<?= Url::to(['images/hilpea.png']) ?>" />
                             <p class="slider-value hilpea-val"><?= $hilpea ?> %</p>
                             <p>Hilpeä</p>
                         </div>
@@ -38,7 +38,7 @@ $this->title = 'My Yii Application';
                     <div class="slider-wrapper">
                         <div class="slider">
                             <div class="slider-inner hammennys"></div>
-                            <img src="images/hammennys.png" />
+                            <img src="<?= Url::to(['images/hammennys.png']) ?>" />
                             <p class="slider-value hammennys-val"><?= $hammennys ?> %</p>
                             <p>Hämmennys</p>
                         </div>
@@ -48,7 +48,7 @@ $this->title = 'My Yii Application';
                     <div class="slider-wrapper">
                         <div class="slider">
                             <div class="slider-inner piina"></div>
-                            <img src="images/piina.png" />
+                            <img src="<?= Url::to(['images/piina.png']) ?>" />
                             <p class="slider-value piina-val"><?= $piina ?> %</p>
                             <p>Piina</p>
                         </div>
@@ -58,7 +58,7 @@ $this->title = 'My Yii Application';
                     <div class="slider-wrapper">
                         <div class="slider">
                             <div class="slider-inner liikuttava"></div>
-                            <img src="images/liikuttava.png" />
+                            <img src="<?= Url::to(['images/liikuttava.png']) ?>" />
                             <p class="slider-value liikuttava-val"><?= $liikuttava ?> %</p>
                             <p>Liikuttava</p>
                         </div>
@@ -68,7 +68,7 @@ $this->title = 'My Yii Application';
                     <div class="slider-wrapper">
                         <div class="slider">
                             <div class="slider-inner sydan"></div>
-                            <img src="images/sydan.png" />
+                            <img src="<?= Url::to(['images/sydan.png']) ?>" />
                             <p class="slider-value sydan-val"><?= $sydan ?> %</p>
                             <p>Ihastuttava</p>
 
