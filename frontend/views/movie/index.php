@@ -54,7 +54,7 @@ $this->registerJs('requirejs.config({
 <div class="movie-index">
 <div class="container">
     <div class="row padding-top">
-        <div class="col-sm-8 video-container">
+        <div class="col-sm-7 video-container">
             <video id="video" width="640" height="360" crossOrigin="anonymous" controls class="video-js vjs-default-skin vjs-big-play-centered">
                 Your browser does not support HTML5 video.
                 
@@ -107,7 +107,7 @@ $this->registerJs('requirejs.config({
                 <?php
                 foreach($model->sortedReactions as $reaction => $percent){
                     echo '<div class="single-reaction top3">';
-                    echo '<img src="'. Url::to(['images/'.$reaction.'.png']).'" /><span>'.$percent.'%</span>';
+                    echo '<img src="'. Url::to(['images/'.$reaction.'.png']).'" /><span>'.$percent.' %</span>';
                     echo '</div>';
                 }
                 ?>

@@ -7,6 +7,9 @@
 .movie-content img{
     width:100%;
 }
+.movie-index p{
+    font-family: 'Arial' !important;
+}
 .video-container{
     padding-left:0;
 }
@@ -172,4 +175,12 @@ ul.emojilist:before{
 }
 .emojilist2 > li > img:hover{
     width:50px;
+}
+
+.single-movie-reactions{
+    background-color:#404041;
+    padding:10px;
+}
+.single-reaction{
+    padding:6px;
 }
