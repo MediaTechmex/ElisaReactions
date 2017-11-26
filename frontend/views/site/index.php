@@ -86,11 +86,11 @@ $this->title = 'Elisa Fiilis';
         </div>
 </div>
 </div>
-
-<div id="results" class="container-fluid results">
-    <div class="header-wrapper">
+<div class="header-wrapper">
         <h2>Tunteisiin sopivat elokuvat</h2>
     </div>
+<div id="results" class="container-fluid results">
+    
     <div class="container">
         <div class="results-row row">
             <div class="col-sm-12">
@@ -106,7 +106,7 @@ $this->title = 'Elisa Fiilis';
                         . '<div class="result-reaction top3">';
                         foreach ($reactions as $reaction => $percent){
                             echo '<img src="'.Url::to(['images/'.$reaction.'.png']).'" />';
-                            echo "<span>$percent%</span>";
+                            echo "<span>$percent %</span>";
                         }
                         echo '</div>'
                         . '</div>';
