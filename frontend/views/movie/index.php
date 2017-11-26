@@ -53,10 +53,7 @@ $this->registerJs('requirejs.config({
 ?>
 <div class="movie-index">
 <div class="container">
-    <h1><?= Html::encode($this->title) ?></h1>
-    <div class="row">
-        
-    
+    <div class="row padding-top">
         <div class="col-sm-8 video-container">
             <video id="video" width="640" height="360" crossOrigin="anonymous" controls class="video-js vjs-default-skin vjs-big-play-centered">
                 Your browser does not support HTML5 video.
@@ -105,8 +102,15 @@ $this->registerJs('requirejs.config({
             </div> -->
         </div>
         <div class="col-sm-4">
-            <div class="result-reactions single-movie-reaction">
-                <div class="result-reaction top3">
+            <h1><?= Html::encode($this->title) ?></h1>
+            <div class="single-movie-reactions">
+                <div class="single-reaction top3">
+                    <img src="<?= Url::to(['images/hammennys.png']) ?>" /><span>50%</span>
+                </div>
+                <div class="single-reaction top3">
+                    <img src="<?= Url::to(['images/hammennys.png']) ?>" /><span>50%</span>
+                </div>
+                <div class="single-reaction top3">
                     <img src="<?= Url::to(['images/hammennys.png']) ?>" /><span>50%</span>
                 </div>
             </div>

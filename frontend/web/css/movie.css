@@ -7,7 +7,23 @@
 .movie-content img{
     width:100%;
 }
-
+.row.padding-top{
+    padding-top: 50px;
+}
+/* movie info */
+.single-movie-reactions{
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+.single-reaction{
+    width: 20%;
+    float: left;
+}
+.single-reaction img{
+    width: 50%;
+    padding-right: 5px;
+}
 
 .timeline-wrapper{
     padding-bottom:0px;
